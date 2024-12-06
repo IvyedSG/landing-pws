@@ -1,7 +1,8 @@
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Eye, Shield, Zap } from 'lucide-react'
-import { AnimatedCounter } from "./AnimatedCounter"
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Eye, Shield, Zap } from "lucide-react";
+import { AnimatedCounter } from "./AnimatedCounter";
+import Image from "next/image"; // Importa el componente
 
 interface VisualizationSectionProps {
   id?: string;
@@ -87,9 +88,11 @@ export function VisualizationSection({ id }: VisualizationSectionProps) {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ffc8]/20 to-purple-500/20 rounded-xl blur-xl" />
             <div className="relative rounded-xl border border-white/10 overflow-hidden">
-              <img
+              <Image
                 src="/11.png"
                 alt="Dashboard Analytics"
+                width={1200} // Cambia por el ancho real
+                height={800} // Cambia por la altura real
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -118,6 +121,5 @@ export function VisualizationSection({ id }: VisualizationSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
